@@ -1,4 +1,4 @@
-[dicionario_de_dados_coruja_surf.md](https://github.com/user-attachments/files/32585663/dicionario_de_dados_coruja_surf.md)# Trabalho-Modelagem-de-Banco-de-Dados
+(https://github.com/user-attachments/files/32585663/dicionario_de_dados_coruja_surf.md)# Trabalho-Modelagem-de-Banco-de-Dados
 [02-01-02a_Modelo e Diagrama Entidade-Relacionamento (MER_DER).pdf]
 
 (https://github.com/user-attachments/files/32313205/02-01-02a_Modelo.e.Diagrama.Entidade-Relacionamento.MER_DER.pdf)

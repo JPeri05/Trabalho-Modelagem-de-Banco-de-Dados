@@ -2,9 +2,6 @@ Trabalho-Modelagem-de-Banco-de-Dados
 
 (https://github.com/user-attachments/files/32313205/02-01-02a_Modelo.e.Diagrama.Entidade-Relacionamento.MER_DER.pdf)
 
-[DER_Coruja_Surf_Conceitual.xlsx](https://github.com/user-attachments/files/32313206/DER_Coruja_Surf_Conceitual.xlsx)[DER_Coruja_Surf.pdf](https://github.com/user-attachments/files/32313209/DER_Coruja_Surf.pdf)
-
-[Relatorio_Levantamento_Requisitos_Coruja_Surf.pdf](https://github.com/user-attachments/files/32313208/Relatorio_Levantamento_Requisitos_Coruja_Surf.pdf)
 
 
 

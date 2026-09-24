@@ -1,6 +1,594 @@
-Trabalho-Modelagem-de-Banco-de-Dados
 
-(https://github.com/user-attachments/files/32313205/02-01-02a_Modelo.e.Diagrama.Entidade-Relacionamento.MER_DER.pdf)
+Entrega 1 — Modelo Conceitual (DER)
+
+Modelagem de um sistema de gestão de informações para a Coruja Surf
+
+---
+
+1. Caracterização da Organização
+
+1.1 Nome e natureza da organização
+
+A organização escolhida para o desenvolvimento deste projeto é a Coruja Surf, que atua no comércio de vestuário, realizando vendas presenciais e vendas online.
+
+O levantamento de requisitos foi realizado por meio de entrevista com Antônio Gracia Ferreira Júnior.
+
+Razão Social / Nome Fantasia: Coruja Surf
+CNPJ: Não informado
+Ramo de atuação: Comércio de vestuário, com vendas presenciais e online.
+Entrevistado: Antônio Gracia Ferreira Júnior.
+
+As informações acima foram obtidas durante o levantamento de requisitos realizado com a organização.
+
+1.2 Contexto e porte
+
+A Coruja Surf realiza a venda de roupas, com foco também nas vendas online.
+
+Atualmente, a organização possui processos predominantemente manuais, com registros realizados em papel, e não utiliza um sistema integrado de gestão.
+
+Está previsto que o sistema seja utilizado pelo proprietário e por aproximadamente quatro colaboradores.
+
+A principal plataforma considerada para utilização do sistema são dispositivos móveis, principalmente celulares e smartphones.
+
+1.3 Problemas e necessidades identificados
+
+Durante o levantamento, foi identificado que a organização possui baixo nível de informatização.
+
+Os principais processos ainda são realizados manualmente, sem um sistema integrado de gerenciamento e sem cadastros estruturados ou histórico organizado.
+
+Os principais problemas e necessidades identificados foram:
+
+- Registros realizados manualmente em papel;
+- Ausência de um sistema integrado de gestão;
+- Falta de cadastros estruturados;
+- Falta de histórico organizado;
+- Necessidade de melhorar a gestão das vendas;
+- Grande demanda de trabalho manual nas operações online;
+- Controle de estoque inexistente ou inadequado;
+- Necessidade de registrar vendas e saídas de produtos;
+- Necessidade de registrar pedidos e comprovantes de pagamento;
+- Necessidade de consultar históricos de vendas, clientes e pedidos;
+- Necessidade de notificações sobre estoque baixo;
+- Necessidade de notificações sobre novos pedidos;
+- Necessidade de notificações sobre status de pagamentos;
+- Necessidade de controle de acesso às informações administrativas e financeiras.
+
+1.4 Justificativa da escolha
+
+A Coruja Surf foi escolhida por apresentar processos de negócio que podem ser representados por meio de uma modelagem de banco de dados, envolvendo clientes, produtos, estoque, vendas, pedidos, pagamentos e usuários.
+
+A organização também apresenta oportunidades de melhoria por meio da informatização dos processos atualmente realizados de maneira manual.
+
+O levantamento identificou como necessidades principais a gestão de estoque, o registro digital de vendas e pedidos, a consulta de históricos, a utilização de alertas e a criação de diferentes perfis de acesso em uma interface voltada para dispositivos móveis.
+
+1.5 Evidências da organização
+
+A existência e os processos da organização foram considerados a partir do levantamento de requisitos realizado por meio de entrevista com Antônio Gracia Ferreira Júnior.
+
+Entrevistado: Antônio Gracia Ferreira Júnior
+Organização: Coruja Surf
+CNPJ: Não informado no levantamento.
+
+Informações que ainda precisam ser anexadas, caso sejam exigidas pela instituição:
+
+- Endereço completo da organização;
+- Telefone ou outro contato;
+- Site ou rede social;
+- Link do Google Maps, se disponível;
+- Fotografias da organização ou da visita;
+- Outras evidências solicitadas pelo professor.
+
+---
+
+2. Processos de Negócio
+
+2.1 Principais processos mapeados
+
+Com base no levantamento realizado, foram identificados os seguintes processos principais:
+
+2.1.1 Venda de produtos
+
+A organização realiza vendas de roupas de forma presencial e online.
+
+O registro de vendas e a saída dos produtos foram identificados como informações diárias essenciais para a operação.
+
+2.1.2 Gestão de estoque
+
+O controle de estoque foi identificado como uma das principais necessidades da organização.
+
+Atualmente, o controle é inexistente ou inadequado, sendo considerada uma prioridade a criação de um processo estruturado para cadastro de produtos e registro de movimentações de entrada e saída.
+
+2.1.3 Registro de pedidos
+
+O processo de pedidos ocorre principalmente no ambiente online.
+
+Atualmente, o cliente realiza o pedido e envia o comprovante de pagamento, sendo necessário substituir esse fluxo informal por um registro digital organizado.
+
+2.1.4 Controle de pagamentos
+
+Os pedidos podem envolver o envio de comprovantes de pagamento.
+
+O sistema deverá permitir organizar essas informações e possibilitar o acompanhamento do status dos pagamentos.
+
+2.1.5 Consulta de históricos
+
+A consulta ao histórico foi identificada como importante para:
+
+- Vendas;
+- Clientes;
+- Pedidos.
+
+2.1.6 Sistema de notificações
+
+Foi identificada a necessidade de avisos relacionados a:
+
+- Estoque baixo;
+- Novos pedidos;
+- Status dos pagamentos.
+
+Essas notificações deverão ser pensadas principalmente para utilização em dispositivos móveis.
+
+2.1.7 Controle de acesso
+
+Embora atualmente exista um único nível de acesso, o levantamento identificou a necessidade de restringir informações administrativas e financeiras ao proprietário.
+
+Como proposta para o sistema, foram identificados os perfis:
+
+- Administrador/Proprietário;
+- Operador/Funcionário.
+
+2.2 Fluxogramas
+
+Os processos principais podem ser representados pelos seguintes fluxos:
+
+Fluxo de venda
+
+Cliente
+   ↓
+Escolha do produto
+   ↓
+Registro da venda/pedido
+   ↓
+Registro dos produtos
+   ↓
+Pagamento
+   ↓
+Confirmação do pagamento
+   ↓
+Atualização do estoque
+   ↓
+Conclusão da venda/pedido
+
+Fluxo de pedido online
+
+Cliente
+   ↓
+Realiza o pedido
+   ↓
+Envia comprovante de pagamento
+   ↓
+Verificação do pagamento
+   ↓
+Atualização do status
+   ↓
+Preparação do pedido
+   ↓
+Atualização do estoque
+   ↓
+Conclusão do pedido
+
+Fluxo de estoque
+
+Produto
+   ↓
+Entrada de produtos
+   ↓
+Atualização do estoque
+   ↓
+Venda/saída do produto
+   ↓
+Nova quantidade em estoque
+   ↓
+Verificação do estoque mínimo
+   ↓
+Alerta de estoque baixo
+
+Fluxo de notificações
+
+Evento do sistema
+       ↓
+Identificação do evento
+       ↓
+Novo pedido / pagamento / estoque baixo
+       ↓
+Geração da notificação
+       ↓
+Usuário recebe o aviso
+       ↓
+Notificação marcada como lida
+
+«Os fluxogramas acima representam os processos identificados e deverão ser transformados em diagramas visuais caso a entrega exija os fluxogramas como imagens anexadas.»
+
+---
+
+3. Requisitos do Sistema
+
+3.1 Requisitos Funcionais
+
+Os requisitos funcionais foram elaborados a partir das necessidades identificadas no levantamento.
+
+Código| Requisito
+RF01| O sistema deve permitir cadastrar clientes.
+RF02| O sistema deve permitir consultar clientes cadastrados.
+RF03| O sistema deve permitir consultar o histórico de vendas dos clientes.
+RF04| O sistema deve permitir cadastrar produtos.
+RF05| O sistema deve permitir consultar produtos cadastrados.
+RF06| O sistema deve permitir registrar entradas de produtos no estoque.
+RF07| O sistema deve permitir registrar saídas de produtos do estoque.
+RF08| O sistema deve permitir consultar a quantidade disponível de cada produto.
+RF09| O sistema deve permitir registrar vendas.
+RF10| O sistema deve permitir registrar os produtos pertencentes a cada venda.
+RF11| O sistema deve permitir registrar pedidos online.
+RF12| O sistema deve permitir acompanhar o status dos pedidos.
+RF13| O sistema deve permitir registrar informações relacionadas aos pagamentos.
+RF14| O sistema deve permitir registrar e consultar comprovantes de pagamento.
+RF15| O sistema deve permitir consultar o histórico de vendas.
+RF16| O sistema deve permitir consultar o histórico de pedidos.
+RF17| O sistema deve permitir consultar informações históricas de clientes.
+RF18| O sistema deve gerar notificações para novos pedidos.
+RF19| O sistema deve gerar notificações relacionadas ao status dos pagamentos.
+RF20| O sistema deve gerar notificações quando o estoque estiver baixo.
+RF21| O sistema deve permitir cadastrar usuários.
+RF22| O sistema deve permitir controlar permissões de acesso dos usuários.
+RF23| O sistema deve permitir diferenciar o acesso do proprietário e dos funcionários.
+RF24| O sistema deve permitir marcar notificações como lidas.
+
+«Os requisitos funcionais representam a proposta de solução derivada das necessidades identificadas no levantamento. As funcionalidades não informadas diretamente pelo entrevistado deverão ser validadas posteriormente.»
+
+3.2 Requisitos Não Funcionais
+
+Código| Requisito
+RNF01| O sistema deve possuir interface adequada para dispositivos móveis.
+RNF02| A interface deve ser responsiva e priorizar a utilização em celulares e smartphones.
+RNF03| O sistema deve possuir controle de autenticação dos usuários.
+RNF04| O sistema deve restringir informações administrativas e financeiras conforme o perfil do usuário.
+RNF05| As informações devem ser armazenadas de forma organizada e consistente.
+RNF06| O sistema deve possibilitar consultas rápidas aos históricos de vendas, clientes e pedidos.
+RNF07| O sistema deve possibilitar futuras expansões de funcionalidades.
+RNF08| As informações de autenticação devem ser protegidas de forma adequada.
+
+A utilização em dispositivos móveis e o controle de permissões foram identificados como necessidades durante o levantamento.
+
+---
+
+4. Regras de Negócio
+
+4.1 Regras operacionais
+
+Com base no levantamento realizado, foram identificadas as seguintes regras e necessidades operacionais:
+
+RN01. A organização realiza vendas de roupas.
+
+RN02. As vendas podem ocorrer presencialmente ou online.
+
+RN03. O registro das vendas e a saída dos produtos são informações importantes para a operação diária.
+
+RN04. Os produtos precisam possuir controle de estoque.
+
+RN05. A movimentação de entrada e saída dos produtos deve ser registrada.
+
+RN06. O cliente pode realizar um pedido online.
+
+RN07. No processo atual, o cliente envia o comprovante de pagamento após realizar o pedido.
+
+RN08. O sistema deverá permitir o registro organizado dos pedidos e pagamentos.
+
+RN09. O sistema deverá permitir consultar históricos de vendas, clientes e pedidos.
+
+RN10. O sistema deverá emitir notificações relacionadas a novos pedidos.
+
+RN11. O sistema deverá permitir notificações relacionadas ao status dos pagamentos.
+
+RN12. O sistema deverá permitir notificações quando houver estoque baixo.
+
+RN13. Informações administrativas e financeiras devem possuir acesso restrito ao proprietário.
+
+RN14. O sistema deverá considerar diferentes perfis de usuário.
+
+RN15. A utilização do sistema deverá priorizar dispositivos móveis.
+
+4.2 Restrições organizacionais
+
+O levantamento identificou algumas limitações e informações ainda não definidas.
+
+Atualmente:
+
+- Não existe cadastro formal de clientes;
+- Não existe cadastro formal de funcionários;
+- Não existe cadastro formal de produtos;
+- O controle de estoque é inexistente ou inadequado;
+- Os registros são predominantemente manuais;
+- Não existe sistema integrado de gerenciamento;
+- Atualmente existe apenas um nível de acesso;
+- Não foram informadas integrações necessárias;
+- Não foram definidas pelo entrevistado as funcionalidades consideradas essenciais;
+- Não foi definido um critério de sucesso para o sistema;
+- Não foi identificada necessidade imediata de emissão de relatórios.
+
+Esses pontos deverão ser aprofundados nas próximas etapas do projeto.
+
+---
+
+5. Dicionário de Dados Conceitual (Preliminar)
+
+O modelo conceitual considera as seguintes entidades principais:
+
+- Cliente;
+- Produto;
+- Estoque;
+- Venda;
+- Item_Venda;
+- Pedido;
+- Pagamento;
+- Usuário;
+- Notificação.
+
+5.1 Cliente
+
+Atributo| Descrição| Regra de negócio associada
+id_cliente| Identificador único do cliente| Chave primária
+nome| Nome do cliente| Cadastro do cliente
+telefone| Telefone do cliente| Informação de contato
+email| E-mail do cliente| Informação de contato
+endereco| Endereço do cliente| Informação de cadastro
+data_cadastro| Data do cadastro| Controle do cadastro
+
+5.2 Produto
+
+Atributo| Descrição| Regra de negócio associada
+id_produto| Identificador do produto| Chave primária
+nome| Nome do produto| Identificação
+descricao| Descrição do produto| Caracterização
+categoria| Categoria do produto| Classificação
+tamanho| Tamanho da roupa| Característica
+cor| Cor do produto| Característica
+preco| Preço de venda| Informação comercial
+ativo| Indica se o produto está ativo| Controle de disponibilidade
+
+5.3 Estoque
+
+Atributo| Descrição| Regra de negócio associada
+id_estoque| Identificador do estoque| Chave primária
+id_produto| Produto relacionado| Chave estrangeira
+quantidade_atual| Quantidade disponível| Deve ser atualizada conforme movimentações
+estoque_minimo| Quantidade mínima considerada| Relacionada ao alerta de estoque baixo
+data_atualizacao| Data da última atualização| Controle da movimentação
+
+5.4 Venda
+
+Atributo| Descrição| Regra de negócio associada
+id_venda| Identificador da venda| Chave primária
+id_cliente| Cliente relacionado| Chave estrangeira
+id_usuario| Usuário responsável| Chave estrangeira
+data_venda| Data da venda| Registro da operação
+valor_total| Valor total da venda| Informação financeira
+status| Situação da venda| Controle da operação
+
+5.5 Item_Venda
+
+Atributo| Descrição| Regra de negócio associada
+id_item_venda| Identificador do item| Chave primária
+id_venda| Venda relacionada| Chave estrangeira
+id_produto| Produto vendido| Chave estrangeira
+quantidade| Quantidade vendida| Deve representar a saída do estoque
+preco_unitario| Preço unitário| Valor do produto no momento da venda
+subtotal| Valor total do item| Quantidade × preço unitário
+
+5.6 Pedido
+
+Atributo| Descrição| Regra de negócio associada
+id_pedido| Identificador do pedido| Chave primária
+id_cliente| Cliente que realizou o pedido| Chave estrangeira
+data_pedido| Data do pedido| Registro da operação
+valor_total| Valor total do pedido| Informação comercial
+status| Status do pedido| Deve permitir acompanhar a situação
+observacao| Informações adicionais| Campo opcional
+
+5.7 Pagamento
+
+Atributo| Descrição| Regra de negócio associada
+id_pagamento| Identificador do pagamento| Chave primária
+id_venda| Venda relacionada| Chave estrangeira
+id_pedido| Pedido relacionado| Chave estrangeira
+valor| Valor do pagamento| Informação financeira
+forma_pagamento| Forma de pagamento| Deve ser registrada
+parcelas| Quantidade de parcelas| Relacionada ao pagamento parcelado
+status| Status do pagamento| Permite acompanhamento
+comprovante| Comprovante enviado pelo cliente| Relacionado ao processo atual
+data_pagamento| Data do pagamento| Registro financeiro
+
+5.8 Usuário
+
+Atributo| Descrição| Regra de negócio associada
+id_usuario| Identificador do usuário| Chave primária
+nome| Nome do usuário| Cadastro
+email| E-mail do usuário| Acesso ao sistema
+senha| Senha do usuário| Deve ser protegida
+perfil| Perfil de acesso| Proprietário ou funcionário
+ativo| Indica se o usuário está ativo| Controle de acesso
+
+Os perfis considerados no levantamento são:
+
+- Administrador/Proprietário;
+- Operador/Funcionário.
+
+5.9 Notificação
+
+Atributo| Descrição| Regra de negócio associada
+id_notificacao| Identificador da notificação| Chave primária
+id_usuario| Usuário destinatário| Chave estrangeira
+tipo| Tipo de notificação| Novo pedido, pagamento ou estoque baixo
+mensagem| Conteúdo do aviso| Informação apresentada ao usuário
+data_envio| Data do envio| Registro da notificação
+lida| Indica se foi visualizada| Controle de leitura
+
+Privacidade
+
+Nenhum dado pessoal real de clientes, funcionários ou outras pessoas deve ser utilizado como exemplo no trabalho.
+
+---
+
+6. Modelagem Conceitual
+
+6.1 Entidades reconhecidas
+
+As entidades foram definidas a partir dos processos e necessidades identificados:
+
+Cliente
+
+Representa os clientes que realizam compras ou pedidos.
+
+Produto
+
+Representa as roupas comercializadas pela Coruja Surf.
+
+Estoque
+
+Representa o controle da quantidade disponível dos produtos.
+
+Venda
+
+Representa uma operação de venda realizada pela organização.
+
+Item_Venda
+
+Representa cada produto pertencente a uma venda.
+
+Pedido
+
+Representa os pedidos realizados, especialmente no processo online.
+
+Pagamento
+
+Representa as informações relacionadas ao pagamento dos pedidos ou vendas.
+
+Usuário
+
+Representa as pessoas autorizadas a utilizar o sistema.
+
+Notificação
+
+Representa os avisos enviados aos usuários.
+
+6.2 Atributos e classificações
+
+Os atributos foram definidos para representar as principais informações necessárias às operações identificadas.
+
+Os identificadores das entidades funcionam como chaves primárias.
+
+Os atributos que estabelecem ligação entre entidades funcionam como chaves estrangeiras.
+
+6.3 Relacionamentos pertinentes
+
+Relacionamento| Descrição
+Cliente — Pedido| Um cliente pode realizar pedidos.
+Cliente — Venda| Um cliente pode realizar vendas.
+Produto — Estoque| O estoque controla a quantidade dos produtos.
+Venda — Item_Venda| Uma venda pode possuir vários itens.
+Produto — Item_Venda| Um produto pode aparecer em diferentes itens de venda.
+Venda — Pagamento| O pagamento pode estar relacionado à venda.
+Pedido — Pagamento| O pagamento pode estar relacionado ao pedido.
+Usuário — Venda| Um usuário pode registrar vendas.
+Usuário — Notificação| Um usuário pode receber notificações.
+
+6.4 Restrições e políticas organizacionais
+
+O modelo considera:
+
+- Controle de produtos;
+- Controle de estoque;
+- Registro de entradas e saídas;
+- Registro de vendas;
+- Registro de pedidos;
+- Registro de pagamentos;
+- Consulta de históricos;
+- Notificações;
+- Controle de usuários;
+- Restrição de informações administrativas e financeiras ao proprietário.
+
+A necessidade de restrição das informações administrativas e financeiras foi identificada diretamente durante o levantamento.
+
+---
+
+7. Diagrama Entidade-Relacionamento (DER)
+
+O Diagrama Entidade-Relacionamento representa a estrutura conceitual proposta para o sistema da Coruja Surf.
+
+Arquivos do DER
+
+DER em PDF:
+
+"DER_Coruja_Surf.pdf" (./DER_Coruja_Surf.pdf)
+
+Modelo conceitual em planilha:
+
+"DER_Coruja_Surf_Conceitual.xlsx" (./DER_Coruja_Surf_Conceitual.xlsx)
+
+O DER contempla as principais entidades identificadas no levantamento:
+
+- Cliente;
+- Produto;
+- Estoque;
+- Venda;
+- Item_Venda;
+- Pedido;
+- Pagamento;
+- Usuário;
+- Notificação.
+
+O diagrama deve representar:
+
+- Entidades;
+- Atributos;
+- Relacionamentos;
+- Cardinalidades.
+
+O modelo foi estruturado considerando a possibilidade de expansão nas próximas etapas do projeto.
+
+---
+
+8. Justificativa Técnica
+
+A modelagem foi desenvolvida considerando os problemas e necessidades identificados durante o levantamento de requisitos.
+
+A entidade Cliente foi criada para permitir a organização das informações dos clientes, já que atualmente não existe cadastro formal e a consulta ao histórico de clientes foi considerada importante.
+
+A entidade Produto representa as roupas comercializadas pela organização.
+
+A entidade Estoque foi separada para representar o controle das quantidades dos produtos, pois o levantamento identificou o controle de estoque como uma necessidade prioritária.
+
+A entidade Venda representa as operações comerciais realizadas pela organização.
+
+A entidade Item_Venda permite representar os produtos que fazem parte de cada venda, evitando concentrar vários produtos em um único registro.
+
+A entidade Pedido foi incluída devido à importância das vendas online para a organização e ao processo atualmente utilizado, no qual o cliente realiza o pedido e envia o comprovante de pagamento.
+
+A entidade Pagamento foi criada para organizar as informações financeiras relacionadas aos pedidos e vendas.
+
+A entidade Usuário representa as pessoas que utilizarão o sistema. O levantamento prevê o proprietário e aproximadamente quatro colaboradores como usuários.
+
+A divisão entre Administrador/Proprietário e Operador/Funcionário foi considerada devido à necessidade de restringir informações administrativas e financeiras ao proprietário.
+
+A entidade Notificação foi incluída para r
+
+
+
+
+
+
+
+
+
 
 
 
@@ -14,286 +602,3 @@ Trabalho-Modelagem-de-Banco-de-Dados
 
 
 
-
-[dicionario_de_dados_coruja_surf.md](https://github.com/user-attachments/files/32585669/dicionario_de_dados_coruja_surf.md)
-# Dicionário de Dados — Coruja Surf
-
-## 1. Identificação do projeto
-
-| Informação | Dados |
-|---|---|
-| Empresa | Coruja Surf |
-| Entrevistado | Antônio Gracia Ferreira Júnior |
-| CNPJ | Não informado |
-| Ramo | Comércio de roupas / vendas online |
-| Principal meio de utilização | Celular |
-| Usuários previstos | Proprietário e aproximadamente 4 pessoas da empresa |
-
----
-
-## 2. Objetivo
-
-Este dicionário de dados foi elaborado a partir da entrevista de levantamento de requisitos realizada com a empresa **Coruja Surf**.
-
-A empresa atualmente realiza parte de seus controles manualmente, principalmente em papel, e não possui um sistema específico para gerenciamento de vendas, pedidos e estoque.
-
-O dicionário apresenta os principais dados que **poderão ser armazenados pelo sistema proposto**, considerando as necessidades identificadas durante a entrevista.
-
-> **Observação:** alguns dados e entidades abaixo são propostas derivadas dos requisitos levantados. Isso não significa que já existam ou sejam atualmente cadastrados pela empresa.
-
----
-
-## 3. Convenções utilizadas
-
-| Termo | Significado |
-|---|---|
-| PK | Chave primária, identificador único do registro |
-| FK | Chave estrangeira, utilizada para relacionar registros |
-| INT | Número inteiro |
-| DECIMAL | Número decimal, utilizado principalmente para valores monetários |
-| VARCHAR | Texto de tamanho variável |
-| TEXT | Texto livre |
-| DATE | Data |
-| DATETIME | Data e hora |
-| BOOLEAN | Valor lógico: verdadeiro ou falso |
-
----
-
-# 4. Entidades e dados
-
-## 4.1 Cliente
-
-Representa a pessoa que realiza uma compra na Coruja Surf.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_cliente | INT | PK | Sim | Identificador único do cliente |
-| nome | VARCHAR(150) | — | Sim | Nome completo do cliente |
-| telefone | VARCHAR(20) | — | Não | Telefone ou celular do cliente |
-| email | VARCHAR(150) | — | Não | E-mail do cliente |
-| endereco | VARCHAR(255) | — | Não | Endereço do cliente |
-| data_cadastro | DATETIME | — | Sim | Data e hora do cadastro |
-
-**Origem no levantamento:** atualmente a empresa não realiza cadastro de clientes, mas o histórico de clientes foi considerado importante pelo entrevistado.
-
----
-
-## 4.2 Produto
-
-Representa uma roupa fabricada e comercializada pela empresa.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_produto | INT | PK | Sim | Identificador único do produto |
-| nome | VARCHAR(150) | — | Sim | Nome do produto |
-| descricao | TEXT | — | Não | Descrição e características do produto |
-| categoria | VARCHAR(100) | — | Não | Categoria da roupa |
-| tamanho | VARCHAR(20) | — | Não | Tamanho do produto |
-| cor | VARCHAR(50) | — | Não | Cor do produto |
-| preco | DECIMAL(10,2) | — | Sim | Preço de venda |
-| quantidade_estoque | INT | — | Sim | Quantidade disponível em estoque |
-| ativo | BOOLEAN | — | Sim | Indica se o produto está disponível para venda |
-
-**Origem no levantamento:** a empresa comercializa roupas próprias e reconhece a necessidade de iniciar um controle adequado de estoque.
-
----
-
-## 4.3 Estoque
-
-Representa o controle das quantidades disponíveis dos produtos.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_estoque | INT | PK | Sim | Identificador do registro de estoque |
-| id_produto | INT | FK | Sim | Produto relacionado ao estoque |
-| quantidade_atual | INT | — | Sim | Quantidade atualmente disponível |
-| estoque_minimo | INT | — | Não | Quantidade mínima para gerar alerta |
-| data_atualizacao | DATETIME | — | Sim | Data e hora da última atualização |
-
-**Observação:** o controle de estoque não existe atualmente de forma adequada, mas foi identificado como uma necessidade de melhoria.
-
----
-
-## 4.4 Venda
-
-Representa uma venda realizada pela empresa.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_venda | INT | PK | Sim | Identificador único da venda |
-| id_cliente | INT | FK | Não | Cliente relacionado à venda |
-| id_usuario | INT | FK | Sim | Usuário responsável pelo registro |
-| data_venda | DATETIME | — | Sim | Data e hora da venda |
-| valor_total | DECIMAL(10,2) | — | Sim | Valor total da venda |
-| status | VARCHAR(30) | — | Sim | Situação da venda |
-
-**Exemplos de status:** Pendente, Confirmada, Cancelada ou Concluída.
-
-**Origem no levantamento:** as vendas são uma das principais informações que precisam ser registradas e atualmente não existe um registro organizado.
-
----
-
-## 4.5 Item_Venda
-
-Representa cada produto incluído em uma venda.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_item_venda | INT | PK | Sim | Identificador do item |
-| id_venda | INT | FK | Sim | Venda à qual o item pertence |
-| id_produto | INT | FK | Sim | Produto vendido |
-| quantidade | INT | — | Sim | Quantidade do produto vendido |
-| preco_unitario | DECIMAL(10,2) | — | Sim | Preço do produto no momento da venda |
-| subtotal | DECIMAL(10,2) | — | Sim | Resultado da quantidade multiplicada pelo preço unitário |
-
-**Observação:** esta entidade permite que uma venda contenha vários produtos.
-
----
-
-## 4.6 Pedido
-
-Representa o pedido realizado pelo cliente, especialmente no processo de vendas online.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_pedido | INT | PK | Sim | Identificador único do pedido |
-| id_cliente | INT | FK | Não | Cliente que realizou o pedido |
-| data_pedido | DATETIME | — | Sim | Data e hora da realização do pedido |
-| valor_total | DECIMAL(10,2) | — | Sim | Valor total do pedido |
-| status | VARCHAR(30) | — | Sim | Situação atual do pedido |
-| observacao | TEXT | — | Não | Informações adicionais sobre o pedido |
-
-**Exemplos de status:** Recebido, Pagamento pendente, Pago, Em preparação, Enviado e Concluído.
-
-**Origem no levantamento:** atualmente o cliente realiza o pedido e envia o comprovante de pagamento para a empresa.
-
----
-
-## 4.7 Pagamento
-
-Representa o pagamento relacionado a uma venda ou pedido.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_pagamento | INT | PK | Sim | Identificador único do pagamento |
-| id_venda | INT | FK | Não | Venda relacionada ao pagamento |
-| id_pedido | INT | FK | Não | Pedido relacionado ao pagamento |
-| valor | DECIMAL(10,2) | — | Sim | Valor pago |
-| forma_pagamento | VARCHAR(50) | — | Sim | Forma utilizada para o pagamento |
-| parcelas | INT | — | Sim | Quantidade de parcelas |
-| status | VARCHAR(30) | — | Sim | Situação do pagamento |
-| comprovante | VARCHAR(255) | — | Não | Referência ao comprovante enviado |
-| data_pagamento | DATETIME | — | Não | Data e hora do pagamento |
-
-**Origem no levantamento:** a empresa recebe comprovantes de pagamento dos pedidos. A empresa também permite parcelamento, sendo que as taxas do parcelamento ficam por conta do cliente devido à margem de lucro reduzida.
-
----
-
-## 4.8 Usuário
-
-Representa uma pessoa autorizada a utilizar o sistema.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_usuario | INT | PK | Sim | Identificador único do usuário |
-| nome | VARCHAR(150) | — | Sim | Nome do usuário |
-| email | VARCHAR(150) | — | Sim | E-mail utilizado para acesso |
-| senha | VARCHAR(255) | — | Sim | Senha armazenada de forma segura |
-| perfil | VARCHAR(30) | — | Sim | Perfil de acesso do usuário |
-| ativo | BOOLEAN | — | Sim | Indica se o usuário está autorizado a acessar o sistema |
-
-**Perfis possíveis:** Proprietário e Funcionário.
-
-**Origem no levantamento:** aproximadamente cinco pessoas poderão utilizar o sistema, incluindo o proprietário. Atualmente não existem níveis de acesso definidos, mas determinadas informações poderão ser restritas ao proprietário.
-
----
-
-## 4.9 Notificação
-
-Representa avisos que podem ser apresentados aos usuários do sistema.
-
-| Campo | Tipo | Chave | Obrigatório | Descrição |
-|---|---|---|---|---|
-| id_notificacao | INT | PK | Sim | Identificador da notificação |
-| id_usuario | INT | FK | Sim | Usuário que receberá a notificação |
-| tipo | VARCHAR(50) | — | Sim | Tipo do aviso |
-| mensagem | TEXT | — | Sim | Conteúdo da notificação |
-| data_envio | DATETIME | — | Sim | Data e hora da notificação |
-| lida | BOOLEAN | — | Sim | Indica se a notificação foi visualizada |
-
-**Exemplos de tipos:** Estoque baixo, Pagamento recebido e Novo pedido.
-
-**Origem no levantamento:** o entrevistado considerou útil o envio de avisos relacionados ao estoque, pagamentos e pedidos.
-
----
-
-# 5. Relacionamentos principais
-
-| Relacionamento | Descrição |
-|---|---|
-| Cliente → Pedido | Um cliente pode realizar vários pedidos |
-| Cliente → Venda | Um cliente pode realizar várias vendas |
-| Pedido → Pagamento | Um pedido pode possuir um ou mais registros de pagamento |
-| Venda → Pagamento | Uma venda pode possuir um ou mais registros de pagamento |
-| Venda → Item_Venda | Uma venda pode possuir vários itens |
-| Produto → Item_Venda | Um produto pode aparecer em vários itens de venda |
-| Produto → Estoque | Um produto possui seu controle de estoque |
-| Usuário → Venda | Um usuário pode registrar várias vendas |
-| Usuário → Notificação | Um usuário pode receber várias notificações |
-
----
-
-# 6. Regras de negócio identificadas
-
-1. A empresa comercializa roupas fabricadas por ela própria, não dependendo de fornecedor externo para os produtos.
-2. As vendas online são uma atividade importante da empresa.
-3. As vendas e saídas de produtos devem ser registradas.
-4. O sistema deve permitir consulta ao histórico de vendas, clientes e pedidos.
-5. O controle de estoque deve ser implementado, pois atualmente não existe um controle adequado.
-6. O sistema poderá emitir avisos relacionados a estoque, pagamentos e pedidos.
-7. A empresa permite parcelamento das compras.
-8. As taxas referentes ao parcelamento ficam por conta do cliente.
-9. O sistema será utilizado principalmente por celular.
-10. O proprietário poderá possuir acesso a informações que não precisam estar disponíveis para todos os funcionários.
-11. Aproximadamente quatro funcionários, além do proprietário, poderão utilizar o sistema.
-12. Não foi identificada, neste momento, uma necessidade específica de emissão de relatórios.
-13. Atualmente não existem níveis de acesso definidos, portanto os perfis apresentados neste documento são uma proposta derivada da necessidade de restringir determinadas informações ao proprietário.
-
----
-
-# 7. Dados que não foram definidos na entrevista
-
-Algumas informações necessárias para o desenvolvimento do sistema não foram especificadas durante a entrevista. Entre elas:
-
-- CNPJ da empresa;
-- Campos obrigatórios para o cadastro de clientes;
-- Campos obrigatórios para o cadastro de funcionários;
-- Formas de pagamento aceitas;
-- Percentuais ou regras das taxas de parcelamento;
-- Quantidade máxima de parcelas;
-- Regras detalhadas para atualização do estoque;
-- Critérios para geração de alertas de estoque;
-- Ferramentas externas que deverão ser integradas ao sistema;
-- As três funções consideradas essenciais pelo entrevistado;
-- Indicadores utilizados para medir se o sistema melhorou o trabalho da empresa;
-- Regras detalhadas de permissão para cada usuário.
-
-Esses pontos deverão ser validados posteriormente com a empresa antes da implementação definitiva.
-
----
-
-# 8. Resumo das oportunidades identificadas
-
-A entrevista indica que as principais oportunidades de informatização estão relacionadas a:
-
-- **Cadastro e organização de clientes;**
-- **Cadastro e controle de produtos;**
-- **Controle de estoque;**
-- **Registro de vendas;**
-- **Organização de pedidos online;**
-- **Registro e acompanhamento de pagamentos;**
-- **Consulta ao histórico de vendas e pedidos;**
-- **Controle de acesso dos usuários;**
-- **Notificações sobre estoque, pagamentos e pedidos.**
-
-O sistema proposto deve considerar principalmente o uso por celular e a necessidade de substituir controles manuais por informações organizadas e facilmente consultáveis.

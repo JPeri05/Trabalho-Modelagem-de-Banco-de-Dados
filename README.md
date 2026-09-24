@@ -1,7 +1,11 @@
 
 Victor Alves Raimundo 
+
 Rafael Dias Andrade 
+
 Gustavo Henrique Ribeiro da Silva
+
+Joao Paulo
 
 
 Entrega 1 — Modelo Conceitual (DER)

@@ -29,7 +29,7 @@ O levantamento de requisitos foi realizado por meio de entrevista com Antônio G
 
 ### Evidência da entrevista
 
-![Evidência da entrevista](./evidencias/entrevista-coruja-surf.jpg)
+![Evidência da entrevista](IMG-20260913-WA0112.jpg)
 
 2. Processos de negócio
 
